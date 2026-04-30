@@ -1,0 +1,18 @@
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px;
+}
+h1{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px;
+}

@@ -1,0 +1,18 @@
+body{
+    background-image: url(./assets/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    }
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+.content{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}

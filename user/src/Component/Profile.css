@@ -1,0 +1,12 @@
+img{
+    background-color: antiquewhite;
+    width: 200px;
+    height: 200px;
+}
+.info{
+    background-color: rgb(255, 179, 81);
+}
+button:hover{
+    background-color: rgb(104, 255, 81);
+    color: white;
+}
