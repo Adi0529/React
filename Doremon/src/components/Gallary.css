@@ -1,0 +1,10 @@
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.gal{
+    width: 100%;
+    border-radius: 50%;
+}
