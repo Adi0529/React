@@ -1,0 +1,43 @@
+.hex-wrapper {
+  display: inline-block;
+  padding: 80px; /* Space for the image to overflow into */
+  overflow: visible;
+}
+
+.hexagon-outer {
+  position: relative; /* Anchor for the image */
+  width: 400px;   
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Move color to the shape below */
+}
+
+/* This creates the Aqua Hexagon behind the image */
+.hexagon-outer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ffff;
+  clip-path: url(#verticalHex);
+  filter: drop-shadow(0 0 15px #00ffff);
+  z-index: 1;
+}
+
+.hexagon-image {
+  position: relative;
+  z-index: 2; /* Sits on top of the aqua shape */
+  width: 500px; /* Larger than 400px to overflow */
+  height: 500px;
+  object-fit: contain;
+  
+  /* IMPORTANT: Remove clip-path from here */
+  clip-path: none !important; 
+  
+  /* Moves image slightly up to pop out of the top */
+  transform: translateY(-20px); 
+}

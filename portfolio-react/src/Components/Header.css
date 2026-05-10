@@ -1,0 +1,4 @@
+.custom-navbar {
+    background: black !important; /* Forces the black color */
+    border-bottom: 2px solid aqua; /* Optional: adds an aqua line under the nav */
+}
