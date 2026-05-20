@@ -23,7 +23,7 @@ export default function Register() {
         
         // Use navigate() function to redirect after a delay so toast shows
         setTimeout(() => {
-            navigate('/login');
+            navigate('/');
         }, 2000);
     }
 
@@ -71,7 +71,7 @@ export default function Register() {
                         <button className="btn btn-warning w-100 fw-bold">Submit</button>
                     </div>
                     <p className="text-light text-center">
-                        Already have an account? <Link to="/login" className="text-warning">Login</Link>
+                        Already have an account? <Link to="/" className="text-warning">Login</Link>
                     </p>
                 </div>
             </form>

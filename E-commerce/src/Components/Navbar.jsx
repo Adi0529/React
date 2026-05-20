@@ -2,8 +2,12 @@ import { useContext } from "react"
 import { themeContext } from "../Context/Context"
 import { Link } from "react-router-dom"
 import shop from "../assets/shop.png"
+import { FaShoppingCart } from "react-icons/fa";
+import { CartContext } from "../CartReducer/CartProvider";
 
 export default function Navbar() {
+    
+    const {state} = useContext(CartContext)
     const {theme}=useContext(themeContext)
     const {toggleTheme}=useContext(themeContext)
     return (
@@ -20,13 +24,19 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="btn btn-outline-success" aria-current="page" href="#">Hi {state.user}</a>
+                            </li>
 
-
-                            <li className="nav-item d-flex">
-                                <Link to="/login" className="btn btn-outline-success" aria-disabled="true">login</Link>
-                                <div class={`form-check form-switch ms-4 mt-2 ${theme =="light" ? "text-dark":"text-light"}`}>
-                                    <input class="form-check-input" onChange={toggleTheme}  type="checkbox" role="switch" id="switchCheckDefault" />
-                                    <label class="form-check-label " for="switchCheckDefault">{theme=="light"?"dark":"light"}</label>
+                            <li className="nav-item d-flex gap-3">
+                                
+                                <Link to="/cart">
+                                <FaShoppingCart className="fs-2"/>
+                                <span className="position-absolute top-5 start-90 translate-middle badge rounded-pill bg-danger">{state.length} </span>
+                                </Link>
+                                <div className={`form-check form-switch ms-4 mt-2 ${theme =="light" ? "text-dark":"text-light"}`}>
+                                    <input className="form-check-input" onChange={toggleTheme}  type="checkbox" role="switch" id="switchCheckDefault" />
+                                    <label className="form-check-label " htmlFor="switchCheckDefault">{theme=="light"?"dark":"light"}</label>
                                 </div>
 
                             </li>

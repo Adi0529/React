@@ -21,10 +21,10 @@ function App() {
      <themeContext.Provider value={{theme,toggleTheme}} >
      <BrowserRouter>
      <Routes>
-      <Route path="/" element={<Dashboard />}></Route>
+      <Route path="/Dashboard" element={<Dashboard />}></Route>
       <Route path="/Product/:ID"  element={<Detail />}></Route>
       <Route path="/cart" element={<Addtocart />}></Route>
-      <Route path="/login" element={<Login />}></Route>
+      <Route path="/" element={<Login />}></Route>
       <Route path="/Register" element={<Register />}></Route>
      </Routes>
      </BrowserRouter>
