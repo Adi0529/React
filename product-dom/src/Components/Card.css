@@ -1,0 +1,9 @@
+img{
+    width: 100%;
+    height: 180px;
+}
+.crd-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap !important;
+}
